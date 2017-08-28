@@ -1,0 +1,257 @@
+      /*Styles
+      1. Global Styles
+        1.1. Typography
+        1.2. Colors
+        1.3 Spacing
+      2. Wrapers
+      3. Sidebar
+      4. Navbar
+      5. Banner
+      6. Buttons
+      5. Footer
+      */
+
+      /*1.GLOBAL*/
+      /*1.1. TYPOGRAPHY*/
+      body {
+        font-weight: 400;
+      }
+
+      @font-face {
+        font-family: Vijaya;
+        src: url('fonts/Vijaya.ttf');
+      }
+
+      h1 {
+        font-family: 'Tahoma', 'Verdana';
+        color: var(--white);
+        font-size: 30px;
+      }
+
+      h4 {
+        font-family: 'Tahoma', 'Verdana';
+        color: var(--black);
+        font-size: 36px;
+      }
+
+      .italic-txt {
+        font-family: 'Vijaya', 'Times New Roman';
+        color: var(--white);
+        font-size: 30px;
+      }
+
+      .normal-dark-txt {
+        font-family: 'Tahoma', 'Verdana';
+        color: var(--black);
+        font-size: 24px;
+        line-height: initial;
+      }
+
+      .normal-light-txt {
+        font-family: 'Tahoma', 'Verdana';
+        color: var(--white);
+        font-size: 24px;
+        line-height: initial;
+      }
+
+      .label-txt {
+        font-family: 'Vijaya', 'Times New Roman';
+        color: var(--black);
+        font-size: 24px;
+        line-height: initial;
+      }
+
+      .slogan-txt {
+        font-family: 'Times New Roman', 'Vijaya';
+        color: var(--white);
+        font-size: 60px;
+      }
+
+      /*FONT_SIZE @media*/
+      @media screen and (min-width: 0px) and (max-width: 460px) {
+        .slogan-txt {
+          font-size: 36px;
+        }
+        .nowrap, .normal-light-txt, .normal-dark-txt {
+          font-size: 18px;
+        }
+        .nowrap {
+          display: block;
+        }
+        .services, h4 {
+          font-size: 24px;
+        }
+        .bg, h1 {
+          font-size: 24px;
+        }
+        footer, p {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+
+      /* For middle screens */
+      @media screen and (min-width: 461px) and (max-width: 992px) {
+        .nowrap {
+          display: block;
+        }
+        .services, h4 {
+          font-size: 24px;
+        }
+        footer, p {
+          font-size: 14px;
+          margin-bottom: 0;
+        }
+      }
+
+      /* For large screens */
+      @media screen and (min-width: 993px) {
+        .nowrap {
+          white-space: inherit;
+          font-size: 24px;
+        }
+      }
+
+      /*1.2 COLORS*/
+       :root {
+        --cool-grey: #454d52;
+        --light-grey: #66788E;
+        --steel-grey: #434B50;
+        --white: #ffffff;
+        --black: #000000;
+      }
+
+      /*1.3 SPACING*/
+      .py-50 {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
+
+      .px-50 {
+        padding-top: 15px;
+        padding-bottom: 5vw;
+      }
+
+      /*MAIN CONTENT*/
+      /*2. WRAPERS*/
+      .sidebar-wrapper {
+        z-index: 1000;
+        position: fixed;
+        left: 75px;
+        width: 0;
+        height: 100%;
+        margin-left: -75px;
+        overflow-y: auto;
+        background: var(--black);
+      }
+
+      .page-content-wrapper {
+        width: 100%;
+        position: absolute;
+      }
+
+      /*Wrappers @media*/
+      /* For small screens */
+      @media screen and (min-width: 0px) and (max-width: 460px) {
+        .sidebar-wrapper {
+          display: none;
+        }
+      }
+      /* For middle screens */
+      @media screen and (min-width: 461px) and (max-width: 767px) {
+        .sidebar-wrapper {
+          display: block;
+        }
+      }
+
+      /* For large screens */
+      @media screen and (min-width: 768px) {
+        .navbar {
+          display: none;
+        }
+        .wrapper {
+          padding-left: 75px;
+        }
+        .sidebar-wrapper {
+          width: 75px;
+        }
+        .page-content-wrapper {
+          position: relative;
+        }
+      }
+
+      /*3. SIDEBAR */
+      .sidebar-nav {
+        position: absolute;
+        top: 0;
+        width: 75px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .sidebar-nav>.sidebar-brand {
+        height: 75px;
+        font-size: 18px;
+        line-height: 70px;
+      }
+
+      /*4.NAVBAR*/
+      .navbar, a.navbar-brand {
+        background: black;
+        padding: 0;
+      }
+
+      .navbar-toggler {
+        color: var(--white);
+        padding-top: 10px;
+      }
+
+      .nav-link {
+        color: var(--white);
+        font-family: 'Tahoma', 'Verdana';
+        color: #ffffff;
+        font-size: 30px;
+        text-align: center;
+      }
+
+      /*5.BANNER*/
+      .bg {
+        background-image: url("imgs/bg.png");
+        background-repeat: no-repeat;
+        background-position: left bottom;
+        background-color: var(--steel-grey);
+      }
+
+      .text-block {
+        max-width: 709px;
+      }
+
+      /*6.BUTTONS*/
+      .btn-footer {
+        border: none;
+        border-radius: 0;
+        background: var(--light-grey);
+        font-family: 'Tahoma', 'Verdana';
+        color: #ffffff;
+        font-size: 24px;
+        width: 235px;
+        height: 47px;
+      }
+
+      .btn-header {
+        border: 1px solid #ffffff;
+        border-radius: 0;
+        background: #434B50;
+        color: #ffffff;
+        font-family: 'Tahoma', 'Verdana';
+        color: #ffffff;
+        font-size: 30px;
+        padding: 10px;
+      }
+
+      /*7. OTHER*/
+      hr {
+        height: 2px;
+        width: 75vw;
+      }
