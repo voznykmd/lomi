@@ -264,3 +264,7 @@
         height: 2px;
         width: 75vw;
       }
+
+      .sidebar-brand,img:hover {
+        transform: scale(1.1);
+      }
