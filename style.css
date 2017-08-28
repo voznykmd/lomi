@@ -239,6 +239,15 @@
         height: 47px;
       }
 
+      /* Add vars */
+      .btn-footer:hover, 
+      .btn-header:hover {
+        background: white;
+        color: black;
+        border: 1px solid black;
+
+      }
+
       .btn-header {
         border: 1px solid #ffffff;
         border-radius: 0;
