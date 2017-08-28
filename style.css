@@ -19,7 +19,7 @@
 
       @font-face {
         font-family: Vijaya;
-        src: url('/fonts/Vijaya.ttf');
+        src: url('fonts/Vijaya.ttf');
       }
 
       h1 {
